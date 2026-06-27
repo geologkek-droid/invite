@@ -140,6 +140,8 @@ body {
 .timeline-heading,
 .timeline-event,
 .timeline-note,
+.calendar-add-button,
+.dress-code-card,
 .wishes-panel {
   opacity: 0;
   transform: translateY(12px);
@@ -209,6 +211,14 @@ body {
 
 .invite-main-revealed .timeline-note {
   animation: softFadeUp 720ms cubic-bezier(0.2, 0.8, 0.2, 1) 660ms both;
+}
+
+.invite-main-revealed .calendar-add-button {
+  animation: softFadeUp 720ms cubic-bezier(0.2, 0.8, 0.2, 1) 760ms both;
+}
+
+.invite-main-revealed .dress-code-card {
+  animation: softFadeUp 760ms cubic-bezier(0.2, 0.8, 0.2, 1) 140ms both;
 }
 
 .invite-main-revealed .wishes-panel {
@@ -369,6 +379,38 @@ body {
   width: 6px;
   transform: rotate(28deg);
   transform-origin: left center;
+}
+
+.calendar-add-icon {
+  position: relative;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  flex: 0 0 auto;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+}
+
+.calendar-add-icon::before,
+.calendar-add-icon::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+
+.calendar-add-icon::before {
+  left: -2px;
+  right: -2px;
+  top: 3px;
+  height: 2px;
+}
+
+.calendar-add-icon::after {
+  left: 5px;
+  top: 8px;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
 }
 
 .timeline-zags-cutout {
@@ -795,6 +837,8 @@ body {
   .timeline-event,
   .timeline-note,
   .timeline-dot,
+  .calendar-add-button,
+  .dress-code-card,
   .wishes-panel,
   .wishes-photo-card {
     opacity: 1;

@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/paths";
+
 export function Wishes({ image, text }: { image: string; text: string }) {
   return (
     <section className="relative px-6 py-8">
@@ -15,7 +17,7 @@ export function Wishes({ image, text }: { image: string; text: string }) {
         <div className="absolute -top-3 left-1/2 h-6 w-20 -translate-x-1/2 rotate-1 bg-white/70 shadow-sticker tape" />
         <img
           className="wishes-photo"
-          src={image}
+          src={withBasePath(image)}
           alt="Детское фото пары с букетом полевых цветов"
         />
       </figure>

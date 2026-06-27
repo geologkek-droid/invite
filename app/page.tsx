@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { DressCode } from "@/components/DressCode";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
 import { Hero } from "@/components/Hero";
 import { StickerScatter } from "@/components/StickerScatter";
@@ -37,7 +38,8 @@ export default function Home() {
             </svg>
             <StickerScatter />
             <Hero data={inviteData.hero} />
-            <Timeline items={inviteData.timeline} />
+            <Timeline calendar={inviteData.calendar} items={inviteData.timeline} />
+            <DressCode data={inviteData.dressCode} />
             <Wishes image={inviteData.wishesImage} text={inviteData.wishes} />
             <Footer data={inviteData.footer} />
           </div>

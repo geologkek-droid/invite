@@ -1,4 +1,5 @@
 import type { inviteData } from "@/data/invite";
+import { withBasePath } from "@/lib/paths";
 
 type HeroData = typeof inviteData.hero;
 
@@ -33,7 +34,7 @@ export function Hero({ data }: { data: HeroData }) {
         <figure className="couple-hero-frame">
           <img
             className="couple-hero-image"
-            src={data.heroImage}
+            src={withBasePath(data.heroImage)}
             alt="Детское фото пары"
           />
           <p className="hero-couple-names">{data.coupleNames}</p>

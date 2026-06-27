@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Masha Vadim Wedding Invite//RU
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Свадьба Маши и Вадима
+BEGIN:VEVENT
+UID:masha-vadim-wedding-20260905@invite.local
+DTSTAMP:20260627T190000Z
+DTSTART:20260905T062000Z
+DTEND:20260905T190000Z
+SUMMARY:Свадьба Маши и Вадима
+LOCATION:Самара
+DESCRIPTION:10:20 — регистрация: ЗАГС\, Самара\, Молодогвардейская 238\n17:00 — банкет: Банкетный зал ЛОФТ\, Самара\, Московское шоссе 41
+END:VEVENT
+END:VCALENDAR

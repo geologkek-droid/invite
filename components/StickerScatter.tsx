@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { withBasePath } from "@/lib/paths";
 
 type StickerItem = {
   src: string;
@@ -43,7 +44,7 @@ export function StickerScatter() {
           className="sticker-scatter__item"
           draggable={false}
           key={`${item.src}-${index}`}
-          src={item.src}
+          src={withBasePath(item.src)}
           style={{
             top: item.top,
             left: item.left,

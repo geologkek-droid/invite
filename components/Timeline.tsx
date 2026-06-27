@@ -1,8 +1,16 @@
 import type { inviteData } from "@/data/invite";
+import { CalendarButton } from "@/components/CalendarButton";
+import { withBasePath } from "@/lib/paths";
 
 type TimelineItem = (typeof inviteData.timeline)[number];
 
-export function Timeline({ items }: { items: readonly TimelineItem[] }) {
+export function Timeline({
+  calendar,
+  items
+}: {
+  calendar: typeof inviteData.calendar;
+  items: readonly TimelineItem[];
+}) {
   const zagsImage = (items[0] as TimelineItem & { zagsImage?: string }).zagsImage;
 
   return (
@@ -13,7 +21,7 @@ export function Timeline({ items }: { items: readonly TimelineItem[] }) {
       {zagsImage ? (
         <img
           className="timeline-zags-cutout"
-          src={zagsImage}
+          src={withBasePath(zagsImage)}
           alt=""
           aria-hidden="true"
         />
@@ -48,6 +56,9 @@ export function Timeline({ items }: { items: readonly TimelineItem[] }) {
             ) : null}
           </div>
         ))}
+      </div>
+      <div className="relative z-10 text-center">
+        <CalendarButton data={calendar} />
       </div>
     </section>
   );
